@@ -1,0 +1,23 @@
+maeher
+=========
+
+This package wraps the REAPER (Robust Epoch And Pitch EstimatoR) library
+originally written by David Talkin at Google, Inc.
+
+REAPER upstream source
+----------------------
+Copyright 2015 Google Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0.
+Original source: https://github.com/google/REAPER
+
+The C++ source files under cpp/reaper/ are reproduced from that repository
+with no algorithmic modifications.  The only change is the removal of two
+diagnostic fprintf(stdout, ...) calls in epoch_tracker.cc (ComputeFeatures),
+made so the library is thread-safe (no concurrent writes to the process-wide
+stdout) and does not clutter the console on every call.  Numerical output is
+unaffected.
+
+Python bindings and packaging
+------------------------------
+Copyright 2024–2026 maeher contributors.
+Licensed under the Apache License, Version 2.0.

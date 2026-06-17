@@ -1,0 +1,32 @@
+# Build artifacts
+_skbuild/
+build/
+dist/
+*.egg-info/
+*.so
+*.pyd
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.eggs/
+venv/*
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp upstream clone (used during initial setup only)
+_reaper_upstream/
