@@ -34,6 +34,8 @@ wheel.packages = ["src/maeher"]
 CMAKE_BUILD_TYPE = "Release"
 
 [tool.cibuildwheel]
+test-requires = ["numpy"]
+test-command = "python -c \"import maeher, numpy as np; maeher.track(np.zeros(16000,'float32'), sample_rate=16000)\""
 build = "cp310-* cp311-* cp312-* cp313-*"
 skip = ["*-musllinux_i686", "*-win32"]
 
